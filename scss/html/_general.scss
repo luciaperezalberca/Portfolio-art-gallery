@@ -1,0 +1,72 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: $color-oscuro;
+}
+ /* color fondo */
+body{
+    background-color: $color-claro;
+}
+
+/* estilos menu nav colores*/
+.fondo-menu{
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+    background-color: $color-principal;
+    a:active{
+        color: $color-oscuro;
+    }
+    .fondo-submenu{
+        background-color: $color-secundario;
+        a:hover{
+            background-color: $color-claro;
+        }
+        a:active{
+            background-color: $color-active;
+            color: $color-oscuro;
+        }
+    }
+}
+
+/* estilos del footer */
+footer{
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .social-media{
+            display: inline-block;
+            padding: 2rem;
+            a{
+                padding: 0.5rem;
+            }
+            a:hover{
+                opacity: 50%;
+                cursor: pointer;
+            }
+        }
+        .enlaces{
+            a{
+                font-weight: bold;
+            }
+            a:hover{
+                opacity: 85%;
+                cursor: pointer;
+            }
+        }
+        p{
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+    
+}

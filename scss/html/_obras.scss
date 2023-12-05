@@ -1,0 +1,44 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+@import "../utilities/extend";
+
+
+main{
+    @extend %flex-column;
+    .sub-titulo{
+        @include sombra-textos(2.8rem);
+        text-shadow: 4px 3px 5px $color-sombra; 
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+        font-family: $tipografia-titulo;
+    }
+    .main-obras{
+        
+        .foto-obra{
+            margin: 1rem;
+           
+            img{
+                width: 80%;
+                @include sombra-imagenes;
+                animation: scale-in-ver-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                transition: filter 1s;
+            }
+
+            @keyframes scale-in-ver-top{
+                0%{
+                    transform: translateZ(-1400px);
+                    opacity: 0;
+                }
+                100%{
+                    transform: translateZ(0);
+                    opacity: 1;
+                }
+            }
+            .informacion-obra{
+                margin-bottom: 3rem;
+                margin-top: 1rem;
+            }
+        }
+        
+    }
+}

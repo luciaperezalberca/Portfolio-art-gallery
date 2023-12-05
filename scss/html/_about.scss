@@ -1,0 +1,43 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+
+.main-about{
+    .titulo-about{
+        margin-bottom: 1rem;
+        @include titulos-clasicos;
+        font-size: 2.5rem;
+    }
+    .foto-artista{
+        @include sombra-imagenes;
+        width: 80%;
+        margin: 2rem;
+        border-radius: 10px;
+        transition: all 2s ease;
+    }
+    p{
+        @include textos-p;
+        padding: 0.5rem 2rem;
+    }
+}
+
+.section-about{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    .datos-artista{
+        .titulo-cards{
+            @include titulos-clasicos;
+            font-size: 1.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+        @include textos-p;
+        @include sombra-imagenes;
+        text-align: center;
+        padding: 2rem;
+        background-color: $color-principal-translucido;
+        border-radius: 20px;
+    }
+}

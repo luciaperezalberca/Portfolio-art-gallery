@@ -1,0 +1,54 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+@import "../utilities/extend";
+
+main{
+        .imagen-artista-home{
+                img{
+                        width: 70%;
+                        padding: 2rem;
+                }
+        } 
+        .titulo-home{
+            @include sombra-textos(3rem);
+            font-size: 3rem;
+            text-shadow: 3px 3px 2px $color-principal;
+            margin: 2rem 3rem 2rem 3rem;
+            font-family: $tipografia-titulo;
+        }
+        .main-home{
+                background-image: url('../../img/fondo-home.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                .texto-home{
+                        font-family: $tipografia;
+                        @extend %flex-column;
+                        padding: 2rem 3rem 1rem 3rem;
+                        background-color: $color-principal-translucido;
+                        border-radius: 20px;
+                        margin-bottom: 2rem;
+                }
+        }
+}
+
+section{
+      .sub-titulo-home{
+        font-family: $tipografia-titulo;
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: center;
+        text-shadow: 2px 2px 1px $color-sombra;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+      }  
+      .obras-destacadas{
+        display: flex;
+        justify-content: center;
+        margin: 3rem;
+        .foto-destacada{
+                img{
+                        width: 95%;
+                }
+        }
+      }
+}

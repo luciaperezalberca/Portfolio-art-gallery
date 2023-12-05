@@ -1,0 +1,26 @@
+@mixin sombra-textos ($font-size){
+    font-size: $font-size;
+    color: $color-oscuro;
+    font-weight: bold;
+    text-align: center;
+    font-family: $tipografia;
+    margin-top: 1.5rem;
+}
+
+@mixin sombra-imagenes{
+    box-shadow: 8px 8px 20px $color-sombra;
+}
+
+@mixin textos-p{
+    font-size: 1rem;
+    margin: 1rem;
+    font-family: $tipografia;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+@mixin titulos-clasicos{
+    font-family: $tipografia;
+    font-weight: 400;
+    text-shadow: 3px 3px 5px $color-sombra;
+}
